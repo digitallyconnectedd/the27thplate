@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu - The 27th Plate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary py-2 text-uppercase border-bottom border-light-subtle sticky-top" id="nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="./Images/Official logo.png" alt="The 27th plate" width="40" height="40">
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" aria-current="page" href="menu.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Menu
+              </a>
+              <ul class="dropdown-menu dropdown-menu-custom">
+                <li class="dropdown-header">Fresh Juices</li>
+                <li><a class="dropdown-item" href="products/fresh-juice-watermelon.html">🍉 Water Melon Chill Splash</a></li>
+                <li><a class="dropdown-item" href="products/fresh-juice-passion.html">🍑 Passion Bliss</a></li>
+                <li><a class="dropdown-item" href="products/fresh-juice-woodapple.html">🥥 Creamy Wood Apple</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li class="dropdown-header">Beverages</li>
+                <li><a class="dropdown-item" href="products/beverage-coffee-cloud.html">☕ Coffee Cloud</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li class="dropdown-header">Lunch Specials</li>
+                <li><a class="dropdown-item" href="products/lunch-grandma-yellow-rice.html">🍚 Grandma's Yellow Rice</a></li>
+                <li><a class="dropdown-item" href="products/lunch-chicken-rice-curry.html">🍛 Chicken Rice & Curry</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-center" href="menu.html"><strong>View Full Menu</strong></a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="order.html">Order</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Our Menu</h1>
+          <p>Discover Our Delicious Selection</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FRESH JUICES ===== -->
+    <section class="menu">
+      <div class="container">
+        <div class="section-title">
+          <h2>Fresh Juices</h2>
+        </div>
+        <div class="grid">
+          <!-- Water Melon Chill Splash -->
+          <div class="card">
+            <img src="images/WatermelonJuice.jpg" alt="Water Melon Chill Splash" class="card-img">
+            <div class="card-content">
+              <h3 class="card-title">Water Melon Chill Splash</h3>
+              <p class="card-description">Refreshing watermelon juice, perfectly chilled and naturally sweet. Perfect for hot days.</p>
+              <div class="card-footer">
+                <a href="products/fresh-juice-watermelon.html" class="btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Passion Bliss -->
+          <div class="card">
+            <img src="images/PassionFruitJuice.jpg" alt="Passion Bliss" class="card-img">
+            <div class="card-content">
+              <h3 class="card-title">Passion Bliss</h3>
+              <p class="card-description">Exotic passion fruit juice blend with a tropical twist. A burst of flavor in every sip.</p>
+              <div class="card-footer">
+                <a href="products/fresh-juice-passion.html" class="btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Creamy Wood Apple -->
+          <div class="card">
+            <img src="images/CreamyWoodApple.jpg" alt="Creamy Wood Apple" class="card-img">
+            <div class="card-content">
+              <h3 class="card-title">Creamy Wood Apple</h3>
+              <p class="card-description">Smooth, creamy wood apple juice with a unique tangy flavor. Rich and nutritious.</p>
+              <div class="card-footer">
+                <a href="products/fresh-juice-woodapple.html" class="btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BEVERAGES ===== -->
+    <section class="menu">
+      <div class="container">
+        <div class="section-title">
+          <h2>Beverages</h2>
+        </div>
+        <div class="grid">
+          <!-- Coffee Cloud -->
+          <div class="card">
+            <img src="images/CoffeeCloud.jpg" alt="Coffee Cloud" class="card-img">
+            <div class="card-content">
+              <h3 class="card-title">Coffee Cloud</h3>
+              <p class="card-description">Smooth, creamy coffee with a fluffy cloud-like foam. The perfect morning companion.</p>
+              <div class="card-footer">
+                <a href="products/beverage-coffee-cloud.html" class="btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LUNCH ===== -->
+    <section class="menu">
+      <div class="container">
+        <div class="section-title">
+          <h2>Lunch Specials</h2>
+        </div>
+        <div class="grid">
+          <!-- Grandma's Chicken Yellow Rice -->
+          <div class="card">
+            <img src="images/YellowRice.jpg" alt="Grandma's Chicken Yellow Rice" class="card-img">
+            <div class="card-content">
+              <h3 class="card-title">Grandma's Chicken Yellow Rice</h3>
+              <p class="card-description">Traditional yellow rice with tender chicken pieces. A homemade classic that's been loved for generations.</p>
+              <div class="card-footer">
+                <a href="products/lunch-grandma-yellow-rice.html" class="btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Homemade Chicken Rice & Curry -->
+          <div class="card">
+            <img src="images/RiceandCurry.jpg" alt="Homemade Chicken Rice & Curry" class="card-img">
+            <div class="card-content">
+              <h3 class="card-title">Homemade Chicken Rice & Curry</h3>
+              <p class="card-description">Fluffy rice paired with rich, aromatic chicken curry. Authentic recipe, homemade goodness.</p>
+              <div class="card-footer">
+                <a href="products/lunch-chicken-rice-curry.html" class="btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-center mb-0">The 27th Plate</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+</html>

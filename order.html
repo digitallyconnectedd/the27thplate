@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Now - The 27th Plate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary py-2 text-uppercase border-bottom border-light-subtle sticky-top" id="nav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="./Images/Official logo.png" alt="The 27th plate" width="40" height="40">
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="menu.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Menu
+              </a>
+              <ul class="dropdown-menu dropdown-menu-custom">
+                <li class="dropdown-header">Fresh Juices</li>
+                <li><a class="dropdown-item" href="products/fresh-juice-watermelon.html">🍉 Water Melon Chill Splash</a></li>
+                <li><a class="dropdown-item" href="products/fresh-juice-passion.html">🍑 Passion Bliss</a></li>
+                <li><a class="dropdown-item" href="products/fresh-juice-woodapple.html">🥥 Creamy Wood Apple</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li class="dropdown-header">Beverages</li>
+                <li><a class="dropdown-item" href="products/beverage-coffee-cloud.html">☕ Coffee Cloud</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li class="dropdown-header">Lunch Specials</li>
+                <li><a class="dropdown-item" href="products/lunch-grandma-yellow-rice.html">🍚 Grandma's Yellow Rice</a></li>
+                <li><a class="dropdown-item" href="products/lunch-chicken-rice-curry.html">🍛 Chicken Rice & Curry</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-center" href="menu.html"><strong>View Full Menu</strong></a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="order.html">Order</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Order Now</h1>
+          <p>Choose Your Favorite Delivery Platform</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ORDER OPTIONS ===== -->
+    <section class="order">
+      <div class="container">
+        <div class="section-title">
+          <h2>Order Through Our Partners</h2>
+          <p style="color: var(--text-light); font-size: 1.05rem;">We deliver through PickMe and Uber Eats</p>
+        </div>
+
+        <div class="order-buttons">
+          <!-- PickMe -->
+          <a href="https://pickme-app-sl.onelink.me/Fore?af_xp=custom&pid=custom&deep_link_value=outletDetailScreen&af_dp=afpickmesl%3A%2F%2F&merchant_id=53702&service_code=FOOD&route_type=food_and_market&route=outletDetailScreen" target="_blank" class="order-btn order-btn-primary">
+            <div class="order-btn-icon">🛵</div>
+            <div class="order-btn-text">Order on PickMe</div>
+            <small style="color: var(--text-light);">Fast & Reliable Delivery</small>
+          </a>
+
+          <!-- Uber Eats -->
+          <a href="https://www.ubereats.com/store-browse-uuid/b91085d0-f4fb-57b6-99ca-728302f5c115?diningMode=PICKUP" target="_blank" class="order-btn order-btn-primary">
+            <div class="order-btn-icon">🍔</div>
+            <div class="order-btn-text">Order on Uber Eats</div>
+            <small style="color: var(--text-light);">Convenient & Easy</small>
+          </a>
+        </div>
+
+        <div style="background: var(--light-bg); padding: 2rem; border-radius: 8px; margin-top: 3rem; text-align: center;">
+          <h3 style="margin-bottom: 1rem;">Connect With Us</h3>
+          <p style="color: var(--text-light); margin-bottom: 1.5rem;">Follow us on social media for updates, photos, and special offers</p>
+          <a href="https://www.instagram.com/the27thplatesl?igsh=MWtkdXQ0YmFpcnI3dQ==" target="_blank" style="display: inline-block; margin: 0 1rem; text-decoration: none;">
+            <span style="font-size: 2rem; color: #E4405F;">📸</span>
+            <p style="color: var(--secondary-color); font-weight: 600; margin-top: 0.5rem;">@the27thplatesl</p>
+          </a>
+        </div>
+
+        <div style="background: var(--light-bg); padding: 2rem; border-radius: 8px; margin-top: 2rem; text-align: center;">
+          <h3 style="margin-bottom: 1rem;">Why Order From Us?</h3>
+          <div class="grid">
+            <div>
+              <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">🏠 Homemade</h4>
+              <p style="margin: 0;">Prepared fresh in our homemade kitchen</p>
+            </div>
+            <div>
+              <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">⚡ Quick</h4>
+              <p style="margin: 0;">Fast preparation and delivery</p>
+            </div>
+            <div>
+              <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">💚 Quality</h4>
+              <p style="margin: 0;">Only the finest ingredients</p>
+            </div>
+            <div>
+              <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">😋 Delicious</h4>
+              <p style="margin: 0;">Authentic flavors in every bite</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-title">
+          <h2>What Our Customers Say</h2>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <div class="card-content">
+              <div style="color: var(--accent-color); margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</div>
+              <p class="card-description">"The best homemade food I've ever ordered! Fresh, delicious, and prepared with so much care. Highly recommended!"</p>
+              <p style="margin: 0; font-weight: 600; color: var(--secondary-color);">- Thisaiveerasingam.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <div style="color: var(--accent-color); margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</div>
+              <p class="card-description">"I've ordered multiple times and every order has been amazing. The delivery is quick and the food is always hot!"</p>
+              <p style="margin: 0; font-weight: 600; color: var(--secondary-color);">- S. Mayuran.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <div style="color: var(--accent-color); margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</div>
+              <p class="card-description">"Their coffee and juices are the best in town! Supporting a homemade business that actually cares about quality."</p>
+              <p style="margin: 0; font-weight: 600; color: var(--secondary-color);">- Sothilingam.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-center mb-0">The 27th Plate</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+</html>
