@@ -17,6 +17,266 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Clean, minimal animations */
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .animate-on-scroll {
+        animation: fadeInUp 0.6s ease-out forwards;
+        opacity: 0;
+      }
+
+      /* Interactive card hover - subtle */
+      .interactive-card {
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .interactive-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(122, 0, 0, 0.1);
+      }
+
+      /* Expandable sections - clean */
+      .expandable-section {
+        border-left: 4px solid var(--accent-color);
+        padding: 1.25rem;
+        background: var(--light-bg);
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-bottom: 0.75rem;
+      }
+
+      .expandable-section:hover {
+        background: #ffe8e8;
+      }
+
+      .expandable-section h4 {
+        color: var(--secondary-color);
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.05rem;
+      }
+
+      .expandable-section .toggle-icon {
+        font-size: 1rem;
+        transition: transform 0.3s ease;
+      }
+
+      .expandable-section.active .toggle-icon {
+        transform: rotate(180deg);
+      }
+
+      .expandable-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        margin-top: 0;
+      }
+
+      .expandable-section.active .expandable-content {
+        max-height: 400px;
+        margin-top: 1rem;
+      }
+
+      .expandable-content p {
+        font-size: 0.95rem;
+        margin-bottom: 0;
+      }
+
+      /* Quote highlights - minimal */
+      .highlight-quote {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        background: var(--light-bg);
+        border-left: 4px solid var(--secondary-color);
+        border-radius: 6px;
+        font-size: 1.05rem;
+        color: var(--secondary-color);
+        font-weight: 600;
+        line-height: 1.6;
+        text-align: center;
+      }
+
+      /* Grid layouts */
+      .problem-solver {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin: 1.5rem 0;
+      }
+
+      .solver-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .solver-card:hover {
+        border-color: var(--accent-color);
+        box-shadow: 0 6px 12px rgba(255, 107, 107, 0.1);
+      }
+
+      .solver-card span {
+        font-size: 2rem;
+      }
+
+      .solver-card h5 {
+        color: var(--secondary-color);
+        font-weight: 600;
+        margin: 0.75rem 0 0.5rem 0;
+        font-size: 1rem;
+      }
+
+      .solver-card p {
+        font-size: 0.9rem;
+        color: var(--text-light);
+      }
+
+      /* Vision grid */
+      .vision-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+        margin: 1.5rem 0;
+      }
+
+      .vision-item {
+        padding: 1.5rem;
+        background: white;
+        border-radius: 8px;
+        border-top: 3px solid var(--accent-color);
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .vision-item:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .vision-item h4 {
+        color: var(--secondary-color);
+        margin: 0.75rem 0;
+        font-size: 1rem;
+      }
+
+      .vision-item p {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+      }
+
+      /* Reasons list */
+      .reasons-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.25rem;
+        margin: 1.5rem 0;
+      }
+
+      .reason-item {
+        padding: 1.25rem;
+        background: white;
+        border-radius: 6px;
+        border-left: 3px solid var(--accent-color);
+        transition: all 0.3s ease;
+      }
+
+      .reason-item:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      .reason-item strong {
+        color: var(--secondary-color);
+        font-size: 1rem;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      .reason-item p {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+      }
+
+      /* Standard grid from css */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .grid-2 {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+
+      .card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .card:hover {
+        box-shadow: 0 6px 12px rgba(122, 0, 0, 0.1);
+      }
+
+      .card-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .card-description {
+        font-size: 0.95rem;
+      }
+
+      /* Final box - clean */
+      .final-message {
+        padding: 2rem;
+        background: var(--light-bg);
+        border-radius: 8px;
+        text-align: center;
+        margin-top: 2rem;
+      }
+
+      .final-message h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+      }
+
+      .final-message p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 0.75rem;
+      }
+
+      .tagline {
+        font-size: 1.15rem;
+        color: var(--secondary-color);
+        font-weight: 700;
+        margin-top: 1.5rem;
+      }
+
+      /* Responsive spacing */
+      section {
+        padding: 2.5rem 0;
+      }
+
+      hr {
+        border: none;
+        height: 1px;
+        background: var(--border-color);
+        margin: 2.5rem 0;
+      }
+    </style>
   </head>
   <body>
     <nav
@@ -92,67 +352,210 @@
     <!-- ===== MAIN CONTENT ===== -->
     <section class="about">
       <div class="container">
-        <div class="section-title">
+        <!-- WHO WE ARE SECTION -->
+        <div class="section-title animate-on-scroll">
           <h2>Who We Are</h2>
         </div>
         
-        <div class="grid grid-2">
+        <div class="grid grid-2 animate-on-scroll" style="align-items: center; margin-bottom: 2rem;">
           <div>
             <h3>A Homemade Cloud Kitchen</h3>
-            <p>The 27th Plate is a homemade cloud kitchen committed to delivering authentic, freshly prepared meals with the warmth of home cooking. We operate from our modern kitchen facility, focusing entirely on quality and customer satisfaction.</p>
-            <p>Unlike large commercial establishments, we maintain the personal touch that makes every meal special. Our small team works tirelessly to ensure consistency, freshness, and excellence in every dish.</p>
+            <p>The 27th Plate is a homemade cloud kitchen delivering authentic, freshly prepared meals with warmth and care. We maintain the personal touch that makes every meal special.</p>
+            <p style="margin-bottom: 0;">Every day, we prepare meals using fresh, high-quality ingredients and time-tested recipes with unwavering consistency.</p>
           </div>
-          <div style="background: var(--light-bg); padding: 2rem; border-radius: 8px;">
-            <img src="./Images/Logo.jpg" alt="Our Kitchen" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
-            <p><strong>Built on passion, served with love.</strong></p>
-          </div>
-        </div>
-
-        <hr style="margin: 3rem 0; border-color: var(--border-color);">
-
-        <div class="grid grid-2">
-          <div style="background: var(--light-bg); padding: 2rem; border-radius: 8px;">
-            <img src="images/origin/origin-story.jpg" alt="Our Origins" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
-            <p><strong>Rooted in tradition, embracing innovation.</strong></p>
-          </div>
-          <div>
-            <h3>Our Journey</h3>
-            <p>We started with a simple vision: to bring home-cooked meals to busy professionals and families who crave authentic flavors without compromising on quality. What began as a small kitchen operation has evolved into a beloved community favorite.</p>
-            <p>Every day, we prepare meals using fresh, high-quality ingredients and time-tested recipes. We believe that good food brings people together, and we're honored to be part of your daily meals.</p>
+          <div class="interactive-card" style="background: var(--light-bg); padding: 1.5rem; border-radius: 8px;">
+            <img src="./Images/Logo.jpg" alt="Our Kitchen" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+            <p style="text-align: center; font-weight: 600; margin-bottom: 0;">Built on passion, served with love.</p>
           </div>
         </div>
 
-        <hr style="margin: 3rem 0; border-color: var(--border-color);">
+        <hr>
 
-        <div class="section-title" style="margin-top: 2rem;">
+        <!-- WHAT WE DO -->
+        <div class="section-title animate-on-scroll">
+          <h2>What We Do</h2>
+        </div>
+
+        <div class="highlight-quote animate-on-scroll">
+          People don't buy products. They buy the story and the feeling behind it.
+        </div>
+
+        <p style="text-align: center; margin-bottom: 1.5rem; color: var(--text-light);">Every dish we make solves a real problem:</p>
+
+        <div class="problem-solver animate-on-scroll">
+          <div class="solver-card interactive-card">
+            <span>✨</span>
+            <h5>Freshness Without Compromise</h5>
+            <p>Never cutting corners on ingredient quality or preparation.</p>
+          </div>
+          <div class="solver-card interactive-card">
+            <span>🍽️</span>
+            <h5>Clean Flavours</h5>
+            <p>Authentic recipes prepared the right way, every time.</p>
+          </div>
+          <div class="solver-card interactive-card">
+            <span>💰</span>
+            <h5>Affordable Quality</h5>
+            <p>Premium quality that respects your wallet and health.</p>
+          </div>
+          <div class="solver-card interactive-card">
+            <span>⚖️</span>
+            <h5>Honest Portions</h5>
+            <p>You get exactly what you pay for, nothing less.</p>
+          </div>
+        </div>
+
+        <hr>
+
+        <!-- CORE VALUES -->
+        <div class="section-title animate-on-scroll">
           <h2>Our Values</h2>
         </div>
 
-        <div class="grid">
-          <div class="card">
+        <div class="grid animate-on-scroll">
+          <div class="card interactive-card">
             <div class="card-content">
-              <h3 class="card-title">🏠 Homemade Quality</h3>
-              <p class="card-description">Every dish is prepared with the same care and attention you'd give to your own family meals.</p>
+              <h3>Honesty & Transparency</h3>
+              <p class="card-description">Quality is honesty, consistency, and care. We improve everything we do.</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card interactive-card">
             <div class="card-content">
-              <h3 class="card-title">🥗 Fresh Ingredients</h3>
-              <p class="card-description">We use only the freshest, highest-quality ingredients in all our preparations.</p>
+              <h3>Built on Trust</h3>
+              <p class="card-description">We work every day to earn your trust through consistent quality.</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card interactive-card">
             <div class="card-content">
-              <h3 class="card-title">💚 Customer Love</h3>
-              <p class="card-description">Your satisfaction is our priority. We treat every customer as part of our extended family.</p>
+              <h3>Meaningful Food</h3>
+              <p class="card-description">Meaningful food in a market full of noise. Every meal matters.</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card interactive-card">
             <div class="card-content">
-              <h3 class="card-title">⏱️ Timely Delivery</h3>
-              <p class="card-description">Quick, reliable delivery ensures your food arrives hot and fresh to your doorstep.</p>
+              <h3>Our Community</h3>
+              <p class="card-description">Our customers join a tribe that chooses meaning over marketing.</p>
             </div>
           </div>
+        </div>
+
+        <hr>
+
+        <!-- OUR IDENTITY -->
+        <div class="section-title animate-on-scroll">
+          <h2>Our Brand Identity</h2>
+        </div>
+
+        <div class="highlight-quote animate-on-scroll">
+          Like Rolex stands for prestige, 27th Plate stands for honest quality.
+        </div>
+
+        <div class="vision-grid animate-on-scroll">
+          <div class="vision-item">
+            <h4>What It Looks Like</h4>
+            <p>Beautifully presented meals that appeal to both eye and palate.</p>
+          </div>
+          <div class="vision-item">
+            <h4>Where It's Sold</h4>
+            <p>Trusted platforms and direct delivery for your convenience.</p>
+          </div>
+          <div class="vision-item">
+            <h4>What People Say</h4>
+            <p>Five-star reviews from loyal customers who trust us completely.</p>
+          </div>
+        </div>
+
+        <hr>
+
+        <!-- WHY WE EXIST -->
+        <div class="section-title animate-on-scroll">
+          <h2>Why We Exist</h2>
+        </div>
+
+        <div class="animate-on-scroll">
+          <div class="expandable-section">
+            <h4>
+              📈 To Give Real Value
+              <span class="toggle-icon">▼</span>
+            </h4>
+            <div class="expandable-content">
+              <p>Every item on our menu provides exceptional value. You're investing in quality that delivers results.</p>
+            </div>
+          </div>
+
+          <div class="expandable-section">
+            <h4>
+              🔒 To Create Trust
+              <span class="toggle-icon">▼</span>
+            </h4>
+            <div class="expandable-content">
+              <p>Trust is built through consistency and always delivering on our promises. Every interaction reinforces that we're a brand you can rely on.</p>
+            </div>
+          </div>
+
+          <div class="expandable-section">
+            <h4>
+              ✨ To Make Your Day Special
+              <span class="toggle-icon">▼</span>
+            </h4>
+            <div class="expandable-content">
+              <p>Your daily food experience matters. Whether it's breakfast, lunch, or a snack, we want every bite to make your day better.</p>
+            </div>
+          </div>
+
+          <div class="expandable-section">
+            <h4>
+              🚀 To Build Something Long-Term
+              <span class="toggle-icon">▼</span>
+            </h4>
+            <div class="expandable-content">
+              <p>This is our purpose and mission. We're here to build something that lasts 1 year, 5 years, 10 years — and beyond.</p>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <!-- WHY CUSTOMERS CHOOSE US -->
+        <div class="section-title animate-on-scroll">
+          <h2>Why Customers Choose Us</h2>
+        </div>
+
+        <div class="reasons-list animate-on-scroll">
+          <div class="reason-item">
+            <strong>What It Looks Like</strong>
+            <p>Professional presentation that respects your appetite.</p>
+          </div>
+          <div class="reason-item">
+            <strong>Where It's Sold</strong>
+            <p>Trusted platforms you already use.</p>
+          </div>
+          <div class="reason-item">
+            <strong>Who Buys It</strong>
+            <p>People who value quality and authenticity.</p>
+          </div>
+          <div class="reason-item">
+            <strong>What Community They Join</strong>
+            <p>Conscious eaters who choose meaning over trends.</p>
+          </div>
+          <div class="reason-item">
+            <strong>What Others Say</strong>
+            <p>Genuine five-star reviews from real customers.</p>
+          </div>
+          <div class="reason-item">
+            <strong style="color: var(--accent-color);">What It MEANS</strong>
+            <p>Quality. Trust. Honesty. Delivering more than promised.</p>
+          </div>
+        </div>
+
+        <hr>
+
+        <!-- FINAL MESSAGE -->
+        <div class="final-message animate-on-scroll">
+          <h3>Our Promise</h3>
+          <p style="margin-bottom: 1rem;"><strong>Branding isn't ads. Branding is connection.</strong> Marketing brings customers to the door, branding makes them stay.</p>
+          <p style="margin-bottom: 1rem;">We stand for clarity, consistency, emotion, and honesty. We stand for giving more than what customers pay.</p>
+          <p class="tagline">27th Plate: Eat your feelings</p>
         </div>
       </div>
     </section>
@@ -174,4 +577,36 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"
   ></script>
+
+  <script>
+    // Expandable sections functionality
+    const expandableSections = document.querySelectorAll('.expandable-section');
+    expandableSections.forEach(section => {
+      section.addEventListener('click', function() {
+        this.classList.toggle('active');
+      });
+    });
+
+    // Scroll animation
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Add smooth scroll behavior
+    document.documentElement.style.scrollBehavior = 'smooth';
+  </script>
 </html>
